@@ -1,5 +1,9 @@
 from pilas import *
 
+torre1=Pila()
+torreaux=Pila()
+torre2=Pila()
+
 def crearDis(n):
     torre = [[]]
     copiar=n
@@ -31,46 +35,26 @@ def crearDis(n):
     
 def hanoi(n,princip,final,aux):
     if n == 1:
-        movimiento(princip-1,"---",final-1)
+       print(princip-1,"---",final-1)
     else:
         hanoi(n-1,princip,aux,final) 
-        movimiento(princip-1,"---",final-1)
+        print(princip-1,"---",final-1)
         hanoi(n-1,aux,final,princip)  
         
 def llenar(n):
     for i in range(n, -1,-1):
-        pilas[0].apilar(i)
-        pilas[1].apilar(0)
-        pilas[2].apilar(0)
+        torre1[0].apilar(i)
+        torreaux[1].apilar(0)
+        torre2[2].apilar(0)
         
-    pilas[0].puntero=n
-    pilas[1].puntero=0
-    pilas[2].puntero=0
+    torre1[0].puntero=n
+    torreaux[1].puntero=0
+    torre2[2].puntero=0
     
-def movimiento(origen,destino):
-    pintar()
-    dato=pilas[origen].desapilar()
-    pilas[destino].apilar(dato)
-    print(1)
-   
-    
-def pintar(n):
-    
-    for i in range(n,-1,-1):
-        for j in range(3):
-            dibujar_discos(pilas[j].items[i])
-        print()
 
-def dibujar_discos(noDiscos):
-    for i in torre[noDiscos]:
-        print(i,end="")
-        
-def llenar_pilas(n):
-    for i in range(n,-1,-1):
+    o=int(input("La cantidad de discos es:"))
 
-O=int(input("Esta es la cantidad de discos:"))
-torre=crearDis
-pilas = [Pila(),Pila(),Pila()]
-llenar_pilas
-hanoi(1,2,3,O)
-pintar()
+    hanoi(n,1,2,3)
+    llenar(n)
+
+
