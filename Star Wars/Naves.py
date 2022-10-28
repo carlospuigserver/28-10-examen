@@ -6,6 +6,7 @@ Naves=[
     ['Halcon Milenario',' 34,37','4'],
     ['Nave de aterrizaje C-9979','210','361'],
     ['Crucero ligero MC40a','550','600'],
+    ['Estrella de la Muerte','105','1500'],
 
 ]
 
