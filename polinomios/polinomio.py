@@ -94,7 +94,7 @@ def determinar_valor(polinomio, termino):
 
 
 
-
+#ELIMINAR VALOR
 def eliminar_valor(polinomio,termino):
     pol1=polinomio.termino_mayor
     while pol1 is not None:
