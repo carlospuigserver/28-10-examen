@@ -13,10 +13,10 @@ class EstrellaMuerte(Nave):
         self.pasajeros=1500000
 
     def __str__(self):
-        print("Toda la información de la Estrella de la muerte es: \n")
+        print("Toda la información de la Estrella de la muerte es: \n"
         f'Longitud =   {self.longitud} metros \n'
         f'Tripulación =   {self.tripulacion} personas \n'
-        f'Pasajeros =   {self.pasajeros} personas \n'
+        f'Pasajeros =   {self.pasajeros} personas \n')
 
 
 class HalconMilenario(Nave):
@@ -27,10 +27,10 @@ class HalconMilenario(Nave):
         self.pasajeros=10
     
     def __str__(self):
-        print("Toda la información del Halcón Milenario es: \n")
+        print("Toda la información del Halcón Milenario es: \n"
         f'Longitud =   {self.longitud} metros \n'
         f'Tripulación =   {self.tripulacion} personas \n'
-        f'Pasajeros =   {self.pasajeros} personas \n'
+        f'Pasajeros =   {self.pasajeros} personas \n')
 
 class ATAP(Nave):
     def __init__(self):
@@ -45,3 +45,12 @@ class CañoneraLAAT(Nave):
         self.longitud=17
         self.tripulacion=4
         self.pasajeros=30
+
+class ATTE(Nave):
+    def __init__(self):
+        self.nombre="AT-TE"
+        self.longitud=8
+        self.tripulacion=20
+        self.pasajeros=20
+
+
