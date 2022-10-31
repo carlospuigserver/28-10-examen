@@ -1,4 +1,4 @@
-import hash
+
 import hashlib
 
 def Encript():
